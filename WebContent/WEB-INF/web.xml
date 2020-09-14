@@ -35,7 +35,7 @@
 </servlet-mapping>
 <servlet>
 <servlet-name>Update</servlet-name>
-<servlet-class>jp.ac.isc.cloud.UserDeleteServlet</servlet-class>
+<servlet-class>jp.ac.isc.cloud.UserUpdateServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 <servlet-name>Update</servlet-name>
