@@ -20,15 +20,14 @@ public class UserSelectServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			//DB接続に使用するクラス
+
 			Connection users = null;
 			try {
-			// MySQL用のJDBCドライバーのクラスをロードする
+
 			Class.forName("com.mysql.jdbc.Driver");
-			// SQLサーバーへの接続に関するインスタンスを取得する
-			users = DriverManager.getConnection("jdbc:mysql://localhost/servlet_db",
-			"root","");
-			//レコードを管理する配列用意
+
+			users = DriverManager.getConnection("jdbc:mysql://localhost/servlet_db","root","");
+
 			ArrayList<Member> list = new ArrayList<Member>();
 			//SQLを実行するためのクラスを用意
 			Statement state = users.createStatement();
